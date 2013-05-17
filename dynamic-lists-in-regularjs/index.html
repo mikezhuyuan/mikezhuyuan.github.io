@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app>
+<head>
+<style>
+	select{
+		float: left;
+		width:200px;
+		height:200px;
+		font-size:16px;
+		padding:4px;
+		margin:10px;
+	}
+</style>
+<script src="/javascripts/angular.min.js" type="text/javascript"></script>
+<script>
+var model=[{level:1,name:"Earth",items:[{level:2,name:"United States",items:[{level:3,name:"New York",items:[]}]},{level:2,name:"China",items:[]},{level:2,name:"Australia",items:[]}]},{level:1,name:"Mars",items:[]},{level:1,name:"Jupiter",items:[]}];
+function MyCtr($scope){var firstlevel=[];for(var i=0;i<model.length;i++)firstlevel.push(model[i]);$scope.lists=[firstlevel];$scope.click=function(item){var items=item.items,newlevel=[];for(var i=0;i<items.length;i++)newlevel.push(items[i]);var lst=$scope.lists;lst.splice(item.level,lst.length-item.level,newlevel)}};
+</script>
+</head>
+
+<body>
+	<div ng-controller="MyCtr">
+		<div ng-repeat="list in lists">
+			<select size="5">
+				<option ng-repeat="item in list" ng-click="click(item)">
+					{{item.name}}
+				</option>
+			</select>
+		</div>
+	</div>
+</body>
+</html>

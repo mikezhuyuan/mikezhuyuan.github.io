@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Mike Zhu's Blog]]></title>
+  <link href="http://mikezhuyuan.github.io/atom.xml" rel="self"/>
+  <link href="http://mikezhuyuan.github.io/"/>
+  <updated>2013-05-18T00:29:02+10:00</updated>
+  <id>http://mikezhuyuan.github.io/</id>
+  <author>
+    <name><![CDATA[Mike Zhu]]></name>
+    <email><![CDATA[mikezhuyuan@hotmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[如何使用Octopress打造属于自己的blog]]></title>
+    <link href="http://mikezhuyuan.github.io/blog/2013/05/04/ru-he-shi-yong-octopressda-zao-shu-yu-zi-ji-de-blog/"/>
+    <updated>2013-05-04T11:32:00+10:00</updated>
+    <id>http://mikezhuyuan.github.io/blog/2013/05/04/ru-he-shi-yong-octopressda-zao-shu-yu-zi-ji-de-blog</id>
+    <content type="html"><![CDATA[<h1>为什么使用Octopress</h1>
+
+<p>市面上有很多blog网站，通用类的例如<code>wordpress</code>，技术类的例如<code>博客园</code>，那么<a href="http://octopress.org/">Octopress</a>的不同和特色是什么呢？</p>
+
+<h2>1. 一切尽在掌握</h2>
+
+<p>大多数blog网站，提供了post的编辑界面，最终发送到client的页面是由自家的template产生，所以最终页面的html不完全受你控制。相反Octopress是部署在<a href="http://github.io">github</a>上面的 <code>静态页面引擎</code>，没错有所有的内容都是预先编辑好的static files，你就像编辑代码一样编辑自己的blog，整个网站从内容到风格样式都由你决定，想要发布就直接git push上去。</p>
+
+<p>静态内容适用于以内容为主的网站比如blog，对于像comments这种动态数据，Octopress采用第三方的provider - <a href="http://disqus.com">Disqus</a>，使得系统非常优雅的<code>seperation of concern</code>。</p>
+
+<h2>2. 极富黑客精神</h2>
+
+<p>Octopress底层依赖于github的<code>Jeklly</code>以及<code>Ruby</code>，创建post和安装theme都是通过运行命令行的rake task，不过不用担心，这些命令的名字有非常好的可读性、容易记忆。</p>
+
+<p>编写blog可以使用<a href="http://daringfireball.net/projects/markdown/syntax">markdown</a>这种流行于开发人员的文本格式。有个很好的对比：html是publishing format，而markdown是writing format。通过markdown可以很方便的写出带有格式的文章(比如超链接，段落)，而由转换程序自动产生html。</p>
+
+<h2>3. 非常容易调试和修改</h2>
+
+<p>本机调试时，可以启动local server预览，而不需要反复部署到live，当你满意修改后，再push到github，这和git本地commit概念是一样的(整个site就是一个repository)。</p>
+
+<h1>如何使用Octopress</h1>
+
+<h2>1. 申请github账号</h2>
+
+<p>如果没有安装git可以使用github提供的客户端，界面简洁操作简单。</p>
+
+<ul>
+<li>For <a href="http://mac.github.com">Mac</a> install</li>
+<li>For <a href="http://windows.github.com">Windows</a> install</li>
+</ul>
+
+
+<h2>2. 创建repository</h2>
+
+<p>必须创建一个名字叫做<em>YOURUSERNAME</em>.github.io的repository。比如我在github上的<em>username</em>是mikezhuyuan，repo就应该是mikezhuyuan.github.io，同时这个名字也是你blog的域名。创建以后需要等待大概十几分钟才能生效。</p>
+
+<h2>3. 安装ruby-1.9.3</h2>
+
+<p>推荐使用Ruby version manager安装 - <a href="https://rvm.io/">rvm</a>，好处是可以支持和自由切换多个版本的ruby。</p>
+
+<p>如果是*nix系统可以直接执行命令</p>
+
+<pre><code>$ curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
+$ rvm --default use 1.9.3
+</code></pre>
+
+<p>然后安装ruby gems</p>
+
+<pre><code>$ gem install jekyll
+$ gem install bundler
+</code></pre>
+
+<p>在mac os环境下如果遇到问题，往往是xcode的没有更新以及没有安装command line tools，因为安装ruby需要合适的gcc编译器。</p>
+
+<h2>3. 安装octopress</h2>
+
+<p>使用git客户端将你的<em>YOURUSERNAME</em>.github.io抓到本地，将下载的<a href="https://github.com/imathis/octopress">octopress</a>解压。进入目录后，运行</p>
+
+<pre><code>$ bundle install
+$ rake install
+</code></pre>
+
+<p><img src="http://mikezhuyuan.github.io/images/octopress_tutorial/folder.png" alt="octopress folder" /></p>
+
+<p><img src="http://mikezhuyuan.github.io/images/octopress_tutorial/install.png" alt="setup octopress" /></p>
+
+<h2>4. 创建第一个post</h2>
+
+<p>运行下面的命令就可以创建一个新的post，并且启动local server，可以在<code>http://localhost:4000</code>访问</p>
+
+<pre><code>$ rake new_post["Hello World"]
+$ rake preview
+</code></pre>
+
+<p>所产生的post文件在<code>source/_posts</code>下面</p>
+
+<p><img src="http://mikezhuyuan.github.io/images/octopress_tutorial/post.png" alt="create a new post" /></p>
+
+<p><img src="http://mikezhuyuan.github.io/images/octopress_tutorial/blog.png" alt="preview on localhost:4000" /></p>
+
+<h2>5. 安装theme</h2>
+
+<p>如同其他很多的开源社区，你可以使用其他user制作的theme打造一个漂亮的blog</p>
+
+<p><a href="http://www.evolument.com/blog/2013/03/02/top-10-plus-octopress-themes/">Top 10+ Octopress Themes</a></p>
+
+<h1>References</h1>
+
+<ul>
+<li><a href="http://webdesign.tutsplus.com/tutorials/applications/getting-started-with-octopress/">Getting Started with Octopress</a></li>
+<li><a href="http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet">Markdown Cheat Sheet</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

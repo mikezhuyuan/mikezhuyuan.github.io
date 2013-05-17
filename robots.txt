@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://mikezhuyuan.github.io/sitemap.xml 

@@ -1,112 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Mike Zhu's Blog</title>
-	<meta name="author" content="Mike Zhu">
-
-	
-	<meta name="description" content="May 4th, 2013 octopress Comments 如何使用Octopress打造属于自己的blog 为什么使用Octopress 市面上有很多blog网站，通用类的例如wordpress，技术类的例如博客园，那么Octopress的不同和特色是什么呢？ 1. 一切尽在掌握 &hellip;">
-	
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="/atom.xml" rel="alternate" title="Mike Zhu's Blog" type="application/atom+xml">
-	
-	<link rel="canonical" href="http://mikezhuyuan.github.io/">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
-	
-</head>
-
-
-<body>
-	<div class="container">
-		<div class="left-col">
-			<div class="intrude-less">
-			<header id="header" class="inner"><div class="profilepic">	
-	<script src="/javascripts/md5.js"></script>
-	<script type="text/javascript">
-		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("mikezhuyuan@hotmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
-	</script>
-</div>
-<h1><a href="/">Mike Zhu's Blog</a></h1>
-<p class="subtitle">Everyone can change the world.</p>
-<nav id="main-nav"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</nav>
-<nav id="sub-nav">
-	<div class="social">
-		
-		
-		
-		<a class="twitter" href="http://twitter.com/dragonpig_cn" title="Twitter">Twitter</a>
-		
-		
-		<a class="github" href="https://github.com/mikezhuyuan" title="GitHub">GitHub</a>
-		
-		
-		
-		
-		<a class="delicious" href="http://delicious.com/dragonpig" title="Delicious">Delicious</a>
-		
-		
-		
-		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
-		
-	</div>
-</nav>
-
-</header>				
-			</div>
-		</div>	
-		<div class="mid-col">
-			
-				
-			
-			<div class="mid-col-container">
-				<div id="content" class="inner">
-<div itemscope itemtype="http://schema.org/Blog">
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
+  <title><![CDATA[Category: octopress | Mike Zhu's Blog]]></title>
+  <link href="http://mikezhuyuan.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://mikezhuyuan.github.io/"/>
+  <updated>2013-05-18T00:29:02+10:00</updated>
+  <id>http://mikezhuyuan.github.io/</id>
+  <author>
+    <name><![CDATA[Mike Zhu]]></name>
+    <email><![CDATA[mikezhuyuan@hotmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2013-05-04T11:32:00+10:00" data-updated="true" itemprop="datePublished">May 4<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/octopress/'>octopress</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/05/04/ru-he-shi-yong-octopressda-zao-shu-yu-zi-ji-de-blog/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/04/ru-he-shi-yong-octopressda-zao-shu-yu-zi-ji-de-blog/" itemprop="url">如何使用Octopress打造属于自己的blog</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h1>为什么使用Octopress</h1>
+  <entry>
+    <title type="html"><![CDATA[如何使用Octopress打造属于自己的blog]]></title>
+    <link href="http://mikezhuyuan.github.io/blog/2013/05/04/ru-he-shi-yong-octopressda-zao-shu-yu-zi-ji-de-blog/"/>
+    <updated>2013-05-04T11:32:00+10:00</updated>
+    <id>http://mikezhuyuan.github.io/blog/2013/05/04/ru-he-shi-yong-octopressda-zao-shu-yu-zi-ji-de-blog</id>
+    <content type="html"><![CDATA[<h1>为什么使用Octopress</h1>
 
 <p>市面上有很多blog网站，通用类的例如<code>wordpress</code>，技术类的例如<code>博客园</code>，那么<a href="http://octopress.org/">Octopress</a>的不同和特色是什么呢？</p>
 
@@ -199,53 +111,7 @@ $ rake preview
 <li><a href="http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet">Markdown Cheat Sheet</a></li>
 </ul>
 
-
-		
-		
-	</div>
-
-</article>
-
-</div>
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
-			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2013
-
-    Mike Zhu
-
-
-Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
-			<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
-
-<script type="text/javascript">
-      var disqus_shortname = 'mikezhuyuan';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-		</div>
-	</div>
-</body>
-</html>
+]]></content>
+  </entry>
+  
+</feed>
